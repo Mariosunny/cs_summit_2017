@@ -25,7 +25,7 @@ SECRET_KEY = 'semml@#9)@uk5^&aa5&o*x7s+v*gkhvvr7dcgfb9onjchjy$m8'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['54.187.124.2']
 
 
 # Application definition
