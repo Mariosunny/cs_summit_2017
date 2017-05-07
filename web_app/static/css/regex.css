@@ -1,0 +1,15 @@
+#input {
+	font-family: 'Inconsolata', monospace;
+	border: 1px solid #aaaaaa;
+}
+#instructions {
+	font-family: 'Inconsolata', monospace;
+}
+#patterns {
+	font-family: 'Inconsolata', monospace;
+	background-color: #eeeeee;
+	border: 1px solid #aaaaaa;
+	padding: 10px;
+	height: 480px;
+	font-size: 16px;
+}

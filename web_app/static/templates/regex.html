@@ -1,10 +1,87 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block scripts %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/regex.css' %}">
+{% endblock %}
+
+
+{% block js %}
 <script src="{% static 'js/regex.js' %}"></script>
 {% endblock %}
 
 {% block body %}
-hello
+
+	<div class="row">
+		<h2>Lesson <span id="lesson-number"></span></h2>
+	</div>
+<div class="row">
+	<div class="large-9 column">
+		<div class="row" id="text-container">
+			<div id="text" class="code" style="height: 5.6em;">
+			</div>
+		</div>
+		<div class="horizontal-space"></div>
+		<div class="row">
+			<input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" id="input" type="text" placeholder="Enter regex here" autofocus"/>
+		</div>
+		<div class="row" id="prompt" style="display:none;">
+			
+		</div>
+		<div class="horizontal-space"></div>
+		<hr>
+		<div class="row" id="instructions" style="display:none;font-family: 'Inconsolata', monospace;font-size:22px;">
+			
+		</div>
+		<div class="horizontal-space"></div>
+		<div class="row" id="prompt">
+			<button id="next" class="button success" style="font-size:28px;display:none;">Next</button>
+		</div>
+	</div>
+	<div class="large-3 column">
+		<div id="patterns">
+			<h5>Patterns</h5>
+			<div class="row">
+				<div class="large-4 small-4 column" style="font-weight:bold;">
+					abc123<br/>
+					\d<br/>
+					\D<br/>
+					\w<br/>
+					\W<br/>
+					\s<br/>
+					\S<br/>
+					{x}<br/>
+					{x,y}<br/>
+					[xyz]<br/>
+					[a-z]<br/>
+					x|y<br/>
+					(xyz)<br/>
+					.<br/>
+					*<br/>
+					?<br/>
+					+<br/>
+				</div>
+				<div class="large-8 small-8 column" style="font-family: 'Nunito', sans-serif;">
+					Digits/letters<br/>
+					Any digit<br/>
+					Any non-digit<br/>
+					Alphanumeric<br/>
+					Non-alphanumeric<br/>
+					Any whitespace<br/>
+					Any non-whitespace<br/>
+					Exactly <i>x</i> times<br/>
+					<i>x</i> to <i>y</i> times<br/>
+					<i>x</i>, <i>y</i>, or <i>z</i><br/>
+					Character range<br/>
+					<i>x</i> or <i>y</i><br/>
+					Group<br/>
+					Any character<br/>
+					0 or more characters<br/>
+					0 or 1 characters<br/>
+					1 or more characters<br/>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 {% endblock %}

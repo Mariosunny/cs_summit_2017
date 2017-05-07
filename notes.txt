@@ -1,0 +1,9 @@
+Regular expressions (regex) are used to match patterns of text.
+
+Regex are used in Computer Science to extract information from text.
+
+Ctrl-F 
+
+
+
+The following lessons.

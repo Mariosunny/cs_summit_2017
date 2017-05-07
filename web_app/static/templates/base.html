@@ -10,17 +10,24 @@
 
 	<title>{{ title }}</title>
 
+	<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
 	<link rel="stylesheet" href="{% static 'css/foundation.css' %}">
+	<link rel="stylesheet" href="{% static 'css/base.css' %}">
 	{% block css %}
 	{% endblock %}
 
 	<script src="{% static 'js/jquery.js' %}"></script>
 	<script src="{% static 'js/foundation.js' %}"></script>
+	<script src="{% static 'js/init.js' %}"></script>
+	<script src="{% static 'js/util.js' %}"></script>
 	{% block js %}
 	{% endblock %}
 </head>
 <body>
-{% block body %}
-{% endblock %}
+<div id="main-container">
+	{% block body %}
+	{% endblock %}
+</div>
 </body>
 </html>
