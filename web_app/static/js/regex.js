@@ -15,6 +15,9 @@ $(function() {
 	var lessons;
 	var util = app.util;
 	var done = false;
+	var sessionID = util.uuid();
+	var timestamp;
+	var attempts = [];
 
 	button.click(function(event) {
 
@@ -29,6 +32,8 @@ $(function() {
 
 	function nextLesson() {
 
+		attempts = [];
+
 		if(done) {
 
 			lessons = createLessons();
@@ -36,6 +41,7 @@ $(function() {
 			getCurrentLesson().load();
 			button.html("Next");
 			done = false;
+			sessionID = util.UUID();
 		}
 
 		if(getCurrentLesson().isLessonComplete) {
@@ -57,12 +63,18 @@ $(function() {
 				getCurrentLesson().load();
 			}
 		}
+
+		timestamp = util.currentTime();
 	}
 
 	input.keyup(function(event) {
 
 		var string = $(this).val();
 
+		if(attempts.length < 200) {
+
+			attempts.push(string);
+		}
 		getCurrentLesson().completedLesson(string);
 
 		if(string) {
@@ -125,6 +137,7 @@ $(function() {
 
 			button.fadeIn(button_fade_time);
 			this.isLessonComplete = true;
+			util.postResults("regex", util.currentTime() - timestamp, 0, currentLesson - 1, sessionID, {"attempts": attempts.join("\n")});
 		}
 	};
 
@@ -133,7 +146,7 @@ $(function() {
 		var lessons = [];
 
 		var lesson1 = new Lesson(
-			["1", "123123", "123231221","111222333"],
+			["0123456789", "12312311223344556677889900", "2207295729852","2353597904347757255558"],
 			["<b>Regular expressions</b> are patterns used to match sequences of characters, i.e. <i>strings</i>. Programmers use regular expressions to automatically extract useful information from strings."],
 			["Try typing in some numbers to highlight some patterns the text above."],
 			function(string) {
@@ -445,5 +458,6 @@ $(function() {
 	}
 
 	lessons = createLessons();
+	timestamp = util.currentTime();
 	getCurrentLesson().load();
 });

@@ -1,6 +1,6 @@
 body {
 	font-family: 'Nunito', sans-serif;
-	font-size: 28px;
+	font-size: 24px;
 }
 h1 {
 	font-family: 'Nunito', sans-serif;	
@@ -39,4 +39,21 @@ mark {
 }
 .horizontal-space {
 	height: 10px;
+}
+.static-text {
+    background-color: #dddddd;
+	border: 1px solid #aaaaaa;
+	overflow: auto;
+	padding: 10px;
+	font-size: 16px;
+}
+.code-input {
+	font-family: 'Inconsolata', monospace;
+	border: 1px solid #aaaaaa;
+	font-size: 16px;
+	overflow: auto;
+	padding: 10px;
+}
+[contenteditable=true]:empty:not(:focus):before{
+	content:attr(data-placeholder)
 }

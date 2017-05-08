@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/authorship.css' %}">
+{% endblock %}
+
+
+{% block js %}
+<script src="{% static 'js/authorship.js' %}"></script>
+{% endblock %}
+
+{% block body %}
+<div id="content-container">
+	<div class="row">
+		<div class="large-6 column">
+			Source
+			<div class="static-text extract" style="height: 10.0em;">
+Gothic narratives are frequently termed convoluted or labyrinthine, assessments often enough fairly accurate. This tendency arises chiefly from the concern gothic novels have with the revelation and setting right of hidden wrongs from the past, and the slow way in which these wrongs are exposed over time through coincidence and a providential fatalism.
+			</div>
+		</div>
+		<div class="large-6 column">
+			Student Essay
+			<div class="static-text extract" style="height: 10.0em;">
+Assessments concerning Gothic narratives are usually fairly accurate; they are frequently termed labyrinthine or convoluted. This trend arises primarily from the concern Gothic Novels have with the revelation, and also setting right of hidden wrongs from the past. Through coincidence and a providential fatalism, these wrongs are exposed over time. Overall, Gothic narratives can be difficult to follow.
+			</div>
+		</div>
+	</div>
+	<div class="horizontal-space"></div>
+	<div class="row">
+		<div class="large-4 column">
+			<div class="code-input" contenteditable style="height: 25em;" data-placeholder="Type code here" autofocus> 
+			</div>
+		</div>
+		<div class="large-4 column">
+			<div class="static-text" style="height: 25em;"> 
+				<h4><b>Instructions</b></h4>
+				<div id="instructions">
+				</div>
+				<div class="horizontal-space"></div>
+				<button id="next" class="button success" style="font-size:24px;float:right;">Next</button>
+			</div>
+		</div>
+		<div class="large-4 column">
+			<div class="static-text" style="height: 25em;"> 
+				<h4><b>Output</b></h4>
+				<div id="output" style="font-family:Courier; font-size:16px;overflow:auto;">
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
