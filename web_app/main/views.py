@@ -65,3 +65,9 @@ class Authorship(View):
 	
 	title = "Authorship"
 	template_name = "authorship/main.html"
+
+
+class Planets(View):
+	
+	title = "Planets"
+	template_name = "planets.html"

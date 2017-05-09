@@ -12,8 +12,11 @@ Text similiarity algorithms can be very complex, involving numerous advanced mat
 
 
 
-source = input();
-source_words = split(source);
-essay = input();
-essay_words = split(essay);
-unique_words = union(source_words, essay_words);
+earth = new Image("earth.png")
+off=20
+a=200
+b=100
+time=0
+while True:
+earth.draw(off+a*cos(time),b*sin(time))
+time=time+1

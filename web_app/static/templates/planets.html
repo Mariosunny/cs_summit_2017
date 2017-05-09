@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/planets.css' %}">
+{% endblock %}
+
+
+{% block js %}
+<script src="{% static 'js/planets.js' %}"></script>
+{% endblock %}
+
+{% block body %}
+<div class="row" style="margin-top:30px;">
+	<div class="large-8 column" style="height:90vh;" id="canvas-container">
+		<canvas id="canvas" width=500 height=500></canvas>
+	</div>
+	<div id="panel" class="large-4 column">
+		<textarea id="code" autofocus rows="8" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>
+		<div id="instructions">
+		</div>
+		<button id="restore-default">Restore Default</button><br/>
+		<button id="next">Next</button>
+	</div>
+</div>
+{% endblock %}
