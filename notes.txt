@@ -20,3 +20,46 @@ time=0
 while True:
 earth.draw(off+a*cos(time),b*sin(time))
 time=time+1
+
+
+What term best decribes your political philosophy?
+
+What is your gender?
+Male
+Female
+
+Traditionalism
+
+"My principles are only those that, before the French Revolution, every well-born person considered sane and normal." - Julius Evola
+People: René Guénon, Julius Evola, Frithjof Schuon
+
+National Socialism
+
+"All life is bound up in three theses: Struggle is the father of all things, virtue lies in blood, leadership is primary and decisive" - Adolf Hitler
+People: Adolf Hitler
+
+
+Anarcho-Capitalism
+Anarcho-Capitalism, or Voluntaryism, is Libertarianism taken to its logical endpoint. Anarcho-Capitalists adhere to the non-aggression principle, which states that the initiation of the use of force is immoral. 
+
+"[Government] attracts the worst kind of men to its ranks, shackles progress, forces its citizens to act against their own judgment, and causes recurring internal and external strife by its coercive existence." - Linda & Morris Tannehill
+
+People: Murray Rothbard, Hans Herman Hoppe, Lew Rockwell
+
+Libetarianism
+
+"The Constitution was made to guard the people against the dangers of good intentions." - Daniel Webster
+
+People: Thomas Jefferson, Ron Paul, Friedrich Hayek
+
+Fascism
+Communism
+Socialism
+Anarchism
+Liberalism
+Civic Nationalism
+Conservatism
+"Conservatism vests in and depends on the widespread, informed understanding of human nature, self-governance and the First Principle of Progress: free people interacting in free markets produce the greatest good for the greatest number always, but only, when tethered to virtue and morality."
+
+Centrism
+Other

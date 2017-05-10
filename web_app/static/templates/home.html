@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+
+
+{% block js %}
+{% endblock %}
+
+{% block body %}
+<div class="row">
+	<div class="large-6 column">
+		<a href="{% url 'regex' %}"><button>Regular Expressions</button></a>
+		<a href="{% url 'planets' %}"><button>Planetary Motion</button></a>
+	</div>
+	<div class="large-6 column">
+		<a href="{% url 'authorship' %}"><button>Plagiarism Detection</button></a>
+		<a href="{% url 'graph' %}"><button>Graphing Functions</button></a>
+		<a href="{% url 'shapes' %}"><button>Drawing Shapes</button></a>
+	</div>
+</div>
+{% endblock %}

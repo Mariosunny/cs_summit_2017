@@ -17,10 +17,38 @@ class View(TemplateView):
 			"title": self.title,
 		}
 
+
+class Home(View):
+	
+	title = "Home"
+	template_name = "home.html"
+
+
 class Regex(View):
 	
 	title = "Regular Expressions"
 	template_name = "regex.html"
+
+
+class Shapes(View):
+	
+	title = "Drawing Shapes"
+	template_name = "shapes.html"
+
+
+def results_shapes(request):
+
+	create_lesson(request),
+
+	return HttpResponse("");
+
+
+def results_graph(request):
+
+	create_lesson(request),
+
+	return HttpResponse("");
+
 
 def results_authorship(request):
 
@@ -69,5 +97,11 @@ class Authorship(View):
 
 class Planets(View):
 	
-	title = "Planets"
+	title = "Planetary Motion"
 	template_name = "planets.html"
+
+
+class Graph(View):
+	
+	title = "Graphing Functions"
+	template_name = "graph.html"
