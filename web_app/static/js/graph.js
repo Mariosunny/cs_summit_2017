@@ -188,6 +188,11 @@ $(function() {
 			function(input) {
 
 				return code.val().includes("function f");
+			},
+			function() {
+
+				code.val(code.val() + " ");
+				setCaret(code.val().length);
 			}
 			),	
 		new Step(["Now we need to define the <b>parameters</b> of the function. Our parameters are all of our indepedent variables. Since we are only working with one indepedent variable, we will have only one parameter. Let's call it <i>x</i>.",
