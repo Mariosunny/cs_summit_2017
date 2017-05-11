@@ -105,7 +105,7 @@ $(function() {
 				var function_name = function_header_regex.exec(match[0])[0].replace(/ /g, "").substring("function".length);
 				function_header_regex.lastIndex = 0;
 
-				if(new RegExp("plot\\(" + function_name + "\\)", 'g').test(rawInput)) {
+				if(new RegExp("plot ?\\(" + function_name + "\\)", 'g').test(rawInput)) {
 
 					functions[function_name] = func;
 					function_bodies[function_name] = expression;
@@ -315,52 +315,6 @@ $(function() {
 				textInput.val('');
 				textInput.focus();
 				textInput.attr('placeholder', 'ex. 1');
-			}
-			),
-		new Step(["Create and plot the following functions:",
-				'<img src="http://latex.codecogs.com/gif.latex?f(x)=x-2" title="\huge f(x)=x-2" />',
-				'<img src="http://latex.codecogs.com/gif.latex?g(x)=x" title="\huge g(x)=x" />',
-				'<img src="http://latex.codecogs.com/gif.latex?h(x)=3" title="\huge h(x)=3" />',
-				'<img src="http://latex.codecogs.com/gif.latex?k(x)=1" title="\huge k(x)=1" />',
-				"<i>f(x)</i> has already been created and plotted for you."
-				],
-			function(input) {
-
-				if(Object.keys(functions).length >= 4) {
-
-					return true;
-				}
-
-				return false;
-			},
-			function() {
-
-				textInput.val('');
-				textInput.hide();
-
-				code.val("function f(x) {\nreturn x - 2\n}\n\nplot(f)");
-				parseCode();
-				setCaret(document.getElementById("code"), "function f(x) {\nreturn x - 2\n}\n".length);
-			}
-			),
-		new Step(["What is the area of the region enclosed by these four functions?",
-				'<img src="http://latex.codecogs.com/gif.latex?f(x)=x-2" title="\huge f(x)=x-2" />',
-				'<img src="http://latex.codecogs.com/gif.latex?g(x)=x" title="\huge g(x)=x" />',
-				'<img src="http://latex.codecogs.com/gif.latex?h(x)=3" title="\huge h(x)=3" />',
-				'<img src="http://latex.codecogs.com/gif.latex?k(x)=1" title="\huge k(x)=1" />'
-				],
-			function(input) {
-
-				var answer = textInput.val().replace(/\s+/g,'');
-
-				return ["4"].includes(answer);
-			},
-			function() {
-
-				textInput.val('');
-				textInput.show();
-				textInput.focus();
-				textInput.attr('placeholder', 'ex. 1.5');
 			}
 			),
 		new Step(["What is the area of the region enclosed by the following functions?",

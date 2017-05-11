@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/gravity.css' %}">
+{% endblock %}
+
+
+{% block js %}
+<script src="{% static 'js/gravity.js' %}"></script>
+{% endblock %}
+
+{% block body %}
+<div class="row" style="margin-top:30px;">
+	<div class="large-7 column box" style="height:90vh;" id="canvas-container">
+		<canvas id="canvas" width=500 height=500></canvas>
+	</div>
+	<div id="panel" class="large-4 large-offset-1 column box">
+		<textarea id="code" autofocus rows="10" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>
+		<div id="instructions">
+		</div>
+		<button id="next">Next</button>
+	</div>
+</div>
+{% endblock %}

@@ -105,3 +105,9 @@ class Graph(View):
 	
 	title = "Graphing Functions"
 	template_name = "graph.html"
+
+
+class Gravity(View):
+	
+	title = "Kinematics"
+	template_name = "gravity.html"

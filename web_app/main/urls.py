@@ -13,4 +13,5 @@ urlpatterns = [
 	url(r'^planets/$', views.Planets.as_view(), name='planets'),
 	url(r'^graph/$', views.Graph.as_view(), name='graph'),
 	url(r'^shapes/$', views.Shapes.as_view(), name='shapes'),
+	url(r'^gravity/$', views.Gravity.as_view(), name='gravity'),
 ]
