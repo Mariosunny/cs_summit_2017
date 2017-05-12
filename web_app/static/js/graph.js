@@ -476,7 +476,7 @@ $(function() {
 
 				ctx.fillStyle = color;
 
-				for(var i = -(canvas.width/2)*iterations; i < (canvas.width/2)*iterations; i++) {
+				for(var i = -(x0 + vx0*t + 0.5*ax*Math.pow(t,2).width/2)*iterations; i < (canvas.width/2)*iterations; i++) {
 
 					try { 
 
