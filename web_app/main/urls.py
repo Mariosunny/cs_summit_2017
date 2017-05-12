@@ -6,6 +6,7 @@ urlpatterns = [
 	url(r'^$', views.Home.as_view(), name='home'),
 	url(r'^regex/$', views.Regex.as_view(), name='regex'),
 	url(r'^results/graph/$', views.results_graph, name='results_graph'),
+	url(r'^results/music/$', views.music_graph, name='results_music'),
 	url(r'^results/shapes/$', views.results_shapes, name='results_shapes'),
 	url(r'^results/regex/$', views.results_regex, name='results_regex'),
 	url(r'^results/authorship/$', views.results_authorship, name='results_authorship'),
@@ -14,4 +15,5 @@ urlpatterns = [
 	url(r'^graph/$', views.Graph.as_view(), name='graph'),
 	url(r'^shapes/$', views.Shapes.as_view(), name='shapes'),
 	url(r'^gravity/$', views.Gravity.as_view(), name='gravity'),
+	url(r'^music/$', views.Music.as_view(), name='music'),
 ]

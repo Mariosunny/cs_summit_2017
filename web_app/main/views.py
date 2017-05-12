@@ -50,6 +50,13 @@ def results_graph(request):
 	return HttpResponse("");
 
 
+def results_music(request):
+
+	create_lesson(request)
+
+	return HttpResponse("")
+
+
 def results_authorship(request):
 
 	attempts = request.GET.get('attempts')
@@ -111,3 +118,9 @@ class Gravity(View):
 	
 	title = "Kinematics"
 	template_name = "gravity.html"
+
+
+class Music(View):
+	
+	title = "Music Composition"
+	template_name = "music.html"

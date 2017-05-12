@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/music.css' %}">
+{% endblock %}
+
+
+{% block js %}
+<script src="{% static 'js/music.js' %}"></script>
+{% endblock %}
+
+{% block body %}
+<div class="row">
+	<div class="large-7 column" style="height:60vh;width:100%;" id="canvas-container">
+		<canvas id="canvas"></canvas>
+	</div>
+</div>
+<div class="row" style="height:30vh;">
+	<div id="panel" class="large-6 column">
+		<div id="instructions">
+		</div>
+		<input id="text-input" type="text"/>
+		<div class="row">
+			<div class="large-6 column">
+				<button id="next">Next</button>
+			</div>
+			<div class="large-6 column">
+				<button id="reset">Reset</button>
+			</div>
+		</div>
+	</div>
+	<div id="panel" class="large-2 column">
+		<textarea id="code" autofocus rows="10" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>
+	</div>
+	<div id="panel" class="large-2 column">
+		<b>Notes</b>
+		<div class="row" style="font-size:12px;">
+			<div class="large-4 column">
+				C#4<br/>
+				C4<br/>
+				B3<br/>
+				Bb3<br/>
+				A#3<br/>
+				A3<br/>
+				Ab3<br/>
+				G#3<br/>
+				G3<br/>
+				Gb3
+			</div>
+			<div class="large-4 column">
+				F#3<br/>
+				F3<br/>
+				E3<br/>
+				Eb3<br/>
+				D#3<br/>
+				D3<br/>
+				Db3<br/>
+				C#3<br/>
+				C3<br/>
+				B2
+			</div>
+			<div class="large-4 column">
+				Bb2<br/>
+				A#2<br/>
+				A2<br/>
+				Ab2<br/>
+				G#2<br/>
+				G2<br/>
+				Gb2<br/>
+				F#2<br/>
+				F2<br/>
+				E2<br/>
+				Eb2
+			</div>
+		</div>
+	</div>
+	<div id="panel" class="large-2 column">
+		<button id="play">Play</button>
+		<br/>
+		<br/>
+		<b>Speed</b>
+		<input id="speed" maxlength="4" size="4" type="text" style="width:70px;font-size:12px;" value="100"/>
+	</div>
+</div>
+{% endblock %}

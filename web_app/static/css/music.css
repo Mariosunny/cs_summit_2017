@@ -1,0 +1,60 @@
+.box {
+	background: #dddddd;
+	border: 1px solid #aaaaaa;
+	height: 90vh;
+	border-radius: 12px;
+	padding: 10px;
+}
+#panel {
+	font-size: 14px;
+	overflow: auto;
+}
+#next {
+	background-color: #00aa00;
+	border-radius: 5px;
+	padding: 12px;
+	transition-duration: 0.2s;
+	font-size: 28px;
+	margin-top: 0px;
+	cursor:pointer;
+}
+#next:hover {
+	background-color: #00dd00;
+}
+#reset {
+	background-color: #0000cc;
+	border-radius: 5px;
+	padding: 12px;
+	transition-duration: 0.2s;
+	font-size: 28px;
+	margin-top: 0px;
+	cursor:pointer;
+	float:right;
+	display: none;
+}
+#reset:hover {
+	background-color: #0000ff;
+}
+#play {
+	background-color: #0000dd;
+	color: white;
+	border-radius: 5px;
+	padding: 12px;
+	transition-duration: 0.3s;
+	font-size: 28px;
+	width: 100%;
+	cursor:pointer;
+}
+#play:hover {
+	background-color: #000099;
+}
+#code {
+	font-family: 'Inconsolata', monospace;
+	padding: 10px;
+	overflow: auto;
+	font-size: 16px;
+	resize: none;
+}
+#text-input {
+	display: none;
+}

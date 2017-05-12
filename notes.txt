@@ -63,3 +63,7 @@ Conservatism
 
 Centrism
 Other
+
+
+
+play("c3",1/4)\nplay("c3",1/4)\nplay("g3",1/4)\nplay("g3",1/4)\nplay("a3",1/4)\nplay("a3",1/4)\nplay("g3",1/2)\nplay("f3",1/4)\nplay("f3",1/4)\nplay("e3",1/4)\nplay("e3",1/4)\nplay("d3",1/4)\nplay("d3",1/4)\nplay("c3",1/2)
