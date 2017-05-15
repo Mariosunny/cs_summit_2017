@@ -1,0 +1,37 @@
+#simulation-code {
+	padding: 0;	
+	font-family: 'Inconsolata', monospace;
+	overflow: auto;
+}
+.line {
+}
+.line input {
+	display: inline;
+	margin: 0 0 0 5px;
+	height: 26px;
+}
+#restart {
+	background-color: #00aa00;
+	border-radius: 5px;
+	padding: 12px;
+	transition-duration: 0.2s;
+	font-size: 28px;
+	margin-top: 10px;
+	cursor:pointer;
+}
+#restart:hover {
+	background-color: #00dd00;
+}
+#reset {
+	margin-left: 10px;
+	background-color: #0000aa;
+	border-radius: 5px;
+	padding: 12px;
+	transition-duration: 0.2s;
+	font-size: 28px;
+	margin-top: 10px;
+	cursor:pointer;
+}
+#reset:hover {
+	background-color: #0000ff;
+}

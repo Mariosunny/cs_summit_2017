@@ -15,5 +15,6 @@ urlpatterns = [
 	url(r'^graph/$', views.Graph.as_view(), name='graph'),
 	url(r'^shapes/$', views.Shapes.as_view(), name='shapes'),
 	url(r'^gravity/$', views.Gravity.as_view(), name='gravity'),
+	url(r'^cells/$', views.Cells.as_view(), name='cells'),
 	url(r'^music/$', views.Music.as_view(), name='music'),
 ]

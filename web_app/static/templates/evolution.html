@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/evolution.css' %}">
+{% endblock %}
+
+
+{% block js %}
+<script src="{% static 'js/evolution.js' %}"></script>
+{% endblock %}
+
+{% block body %}
+<div class="row">
+	<div class="large-7 column" style="height:90vh;">
+		<div id="canvas-container" style="height:90vh;">
+			<canvas id="canvas" style="border: 1px solid black;"></canvas>
+		</div>
+	</div>
+	<div class="large-5 column" style="padding: 10px;border:1px solid black;height:90vh;font-size:14px;background-color:#eeeeee;">
+		<div id="simulation-code">
+			<div class="line">cells = []</div>
+			<div class="line">number_of_cells = <input id="number-of-cells" type="text" value="25" max-length="3" style="width:45px;"/></div>
+			<div class="line">velocity = <input id="velocity" type="text" value="2" max-length="3" style="width:45px;"/></div>
+			<div class="line">cell_color = "<input id="cell-color" type="text" value="red" max-length="12" style="width:120px;"/>"</div>
+			<div class="line">initial_radius = <input id="initial-radius" type="text" value="5" max-length="3" style="width:45px;"/></div>
+			<div class="line"></div>
+			<div class="line">init {</div>
+			<div class="line">&nbsp;&nbsp;loop number_of_cells {</div>
+			<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;x = random() * canvas.width/<input id="width-modifier" type="text" value="1" max-length="3" style="width:45px;"/></div>
+			<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;y = random() * canvas.height/<input id="height-modifier" type="text" value="1" max-length="3" style="width:45px;"/></div>
+			<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;cells.add(new Cell(x, y, initial_radius))</div>
+			<div class="line">&nbsp;&nbsp;}</div>
+			<div class="line">}</div>
+			<div class="line"></div>
+			<div class="line">draw {</div>
+			<div class="line">&nbsp;&nbsp;for cell in cells {</div>
+			<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;drawCircle(cell_color, cell.x, cell.y, cell.radius)</div>
+			<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;cell.x += cell.velocity</div>
+			<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;cell.y += cell.velocity</div>
+			<div class="line"></div>
+			<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;for other_cell in cells {</div>
+			<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(other_cell.collidesWith(cell)) {</div>
+			<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cell.radius = cell.radius + other_cell.radius</div>
+			<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;other_cell.destroy()</div>
+			<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</div>
+			<div class="line">&nbsp;&nbsp;&nbsp;&nbsp;}</div>
+			<div class="line">&nbsp;&nbsp;}</div>
+			<div class="line">&nbsp;&nbsp;sleep(<input id="sleep" type="text" value="50" max-length="4" style="width:60px;"/>)</div>
+			<div class="line">}</div>
+		</div>
+		<button id="restart">Restart</button>
+		<button id="reset">Restore Defaults</button>
+	</div>
+</div>
+{% endblock %}

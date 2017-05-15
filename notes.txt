@@ -12,58 +12,53 @@ Text similiarity algorithms can be very complex, involving numerous advanced mat
 
 
 
-earth = new Image("earth.png")
-off=20
-a=200
-b=100
-time=0
-while True:
-earth.draw(off+a*cos(time),b*sin(time))
-time=time+1
+- Drink water from [nearest water source, farthest water source, most abundant water source, safest water source, least crowded water source, most crowded water source]
+- Eat food from [nearest food source, farthest food source, most abundant food source, safest food source, least crowded food source, most crowded food source]
+
+- Wander
+
+Reproduce 
+Grow Stronger
+Attack [nearest enemy, farthest enemy, weakest enemy, strongest enemy]
 
 
-What term best decribes your political philosophy?
+When:
+- size is x or greater
+- size is x or less
+- near x or more allies
+- near x or less allies
+- under attack
+- not under attack
+- food is x% or greater
+- food is x% or less
+- water is x% or greater
+- water is x% or less
 
-What is your gender?
-Male
-Female
+cells = []
+number_of_cells = 10
+velocity = 2
+cell_color = "red"
 
-Traditionalism
+init {
+	loop number_of_cells {
+		x = random() * canvas.width
+		y = random() * canvas.height
+		cells.add(new Cell(x, y))
+	}
+}
 
-"My principles are only those that, before the French Revolution, every well-born person considered sane and normal." - Julius Evola
-People: René Guénon, Julius Evola, Frithjof Schuon
-
-National Socialism
-
-"All life is bound up in three theses: Struggle is the father of all things, virtue lies in blood, leadership is primary and decisive" - Adolf Hitler
-People: Adolf Hitler
-
-
-Anarcho-Capitalism
-Anarcho-Capitalism, or Voluntaryism, is Libertarianism taken to its logical endpoint. Anarcho-Capitalists adhere to the non-aggression principle, which states that the initiation of the use of force is immoral. 
-
-"[Government] attracts the worst kind of men to its ranks, shackles progress, forces its citizens to act against their own judgment, and causes recurring internal and external strife by its coercive existence." - Linda & Morris Tannehill
-
-People: Murray Rothbard, Hans Herman Hoppe, Lew Rockwell
-
-Libetarianism
-
-"The Constitution was made to guard the people against the dangers of good intentions." - Daniel Webster
-
-People: Thomas Jefferson, Ron Paul, Friedrich Hayek
-
-Fascism
-Communism
-Socialism
-Anarchism
-Liberalism
-Civic Nationalism
-Conservatism
-"Conservatism vests in and depends on the widespread, informed understanding of human nature, self-governance and the First Principle of Progress: free people interacting in free markets produce the greatest good for the greatest number always, but only, when tethered to virtue and morality."
-
-Centrism
-Other
-
-
-
-play("c3",1/4)\nplay("c3",1/4)\nplay("g3",1/4)\nplay("g3",1/4)\nplay("a3",1/4)\nplay("a3",1/4)\nplay("g3",1/2)\nplay("f3",1/4)\nplay("f3",1/4)\nplay("e3",1/4)\nplay("e3",1/4)\nplay("d3",1/4)\nplay("d3",1/4)\nplay("c3",1/2)
+draw {
+	for cell in cells {
+		drawCircle(cell_color, cell.x, cell.y, cell.radius)
+		cell.x += cell.velocity
+		cell.y += cell.velocity
+		
+		for other_cell in cells {
+			if(other_cell.collidesWith(cell)) {
+				cell.radius = cell.radius + other_cell.radius
+				other_cell.destroy()
+			}
+		}
+	}
+	sleep(200)
+}

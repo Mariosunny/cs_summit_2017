@@ -492,7 +492,7 @@ $(function() {
 
 				var answer = textInput.val().toLowerCase().replace(/\s*/, '');
 
-				return ["twinkle", "little","star","how","wonder", "world", "diamond"].includes(answer);
+				return ["twinkle", "little","star","how","wonder", "world", "diamond", "macdonald", "mcdonald", "farm", "old"].includes(answer);
 			},
 			function() {
 

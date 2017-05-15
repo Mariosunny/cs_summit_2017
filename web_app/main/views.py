@@ -124,3 +124,9 @@ class Music(View):
 	
 	title = "Music Composition"
 	template_name = "music.html"
+
+
+class Cells(View):
+	
+	title = "Cells Simulator"
+	template_name = "evolution.html"
