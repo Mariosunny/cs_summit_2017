@@ -37,7 +37,7 @@
 
             $.ajax({
                 type: "GET",
-                url: "http://54.187.124.2:8000/results/" + type + "/",
+                url: "http://127.0.0.1:8000/results/" + type + "/",
                 data: $.extend({"time": time, "topic": topic, "lesson": lesson, "session": sessionID}, data)
             });
         }
