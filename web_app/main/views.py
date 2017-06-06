@@ -130,3 +130,15 @@ class Cells(View):
 	
 	title = "Cells Simulator"
 	template_name = "evolution.html"
+
+
+class Game(View):
+	
+	title = "Game"
+	template_name = "game.html"
+
+
+class Progress(View):
+	
+	title = "Progress"
+	template_name = "progress.html"

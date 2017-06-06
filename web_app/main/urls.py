@@ -17,4 +17,6 @@ urlpatterns = [
 	url(r'^gravity/$', views.Gravity.as_view(), name='gravity'),
 	url(r'^cells/$', views.Cells.as_view(), name='cells'),
 	url(r'^music/$', views.Music.as_view(), name='music'),
+	url(r'^game/$', views.Game.as_view(), name='game'),
+	url(r'^progress/$', views.Progress.as_view(), name='progress'),
 ]

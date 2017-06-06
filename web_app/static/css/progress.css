@@ -1,0 +1,33 @@
+body {
+
+	font-size: 14px;
+	font-family: Arial;
+}
+.session {
+	margin-top: 3px;
+}
+.text {
+	font-size: bold;
+	margin-top: 5px;
+	font-family: Arial;
+	overflow-x: hidden;
+	white-space: nowrap;
+	-webkit-animation: 1s blink step-end infinite;
+}
+.rect {
+	background-color: #00dd00;
+	width: 0px;
+	height: 25px;
+	float: left;
+	border: 1px solid #00cc00;
+}
+.num {
+	width: 25px;
+	height: 25px;
+	float: left;
+	margin-left: 15px;
+}
+.header {
+	font-size: 26px;
+	font-weight: bold;
+}
